@@ -1,0 +1,55 @@
+{{#extend "layout"}}
+
+    {{#content "meta"}}
+    {{/content}}
+
+    {{#content "css"}}
+    {{/content}}
+
+    {{#content "js"}}
+    {{/content}}
+
+    {{#content "pre"}}
+    {{/content}}
+
+    {{#content "theme"}}{{/content}}
+    {{#content "body"}}
+    Details here
+    <p class="total">Total: {{total}}</p>
+    {{#each details}}
+        <p>{{Title}}</p>
+        <p>{{'Movie Release Year'}}</p>
+        <p>{{'Running Time'}}</p>
+        <p>{{Genre}}</p>
+        <p>{{Director}}</p>
+        <p>{{Country}}</p>
+        <p><img src="{{'Front Cover'}}" alt=""></p>
+        <p>{{'Trailer URLs'}}</p>
+        <p>{{Format}}</p>
+        <p>{{'IMDb Rating'}}</p>
+        <p>{{Writer}}</p>
+        <p>{{Actor}}</p>
+        <p>{{'Audience Rating'}}</p>
+        <p>{{'Audio Tracks'}}</p>
+        <p>{{'Movie Release Date'}}</p>
+        <p>{{Plot}}</p>
+        <p>{{Producer}}</p>
+        <p>{{'Release Date'}}</p>
+        <p>{{'Release Year'}}</p>
+        <p><img src="{{'Back Cover'}}" alt=""></p>
+        <p><img src="{{Backdrop}}" alt=""></p>
+        <p>{{Barcode}}</p>
+        <p>{{Chapters}}</p>
+        <p>{{Distributor}}</p>
+        <p>{{Episodes}}</p>
+        <p>{{'Extra Features'}}</p>
+    {{/each}}
+    {{/content}}
+
+    {{#content "foot" mode="prepend"}}
+    {{/content}}
+
+    {{#content "scripts"}}
+    {{/content}}
+
+{{/extend}}

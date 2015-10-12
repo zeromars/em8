@@ -1,0 +1,274 @@
+@import "bourbon";
+@import "neat";
+
+$xsmall: 10px;
+$small: 11px;
+$norm: 12px;
+$med: 14px;
+$large: 16px;
+$larger: 18px;
+$xlarge: 20px;
+$xxlarge: 24px;
+$xxxlarge: 32px;
+$reallybig: 44px;
+$tremendous: 56px;
+$absurd: 72px;
+
+$black: #000;
+$white: #fff;
+$med: #282828;
+$dark: #1e1e1e;
+$darkest: #181818;
+$med_dark: #202020;
+$warm: #666;
+$light_grey: #cccccc;
+$light: #ffffff;
+$social: #464646;
+$body: #4b4b4c;
+$lighter: #ebebeb;
+
+$blue: #0c9cca;
+$green: #85b465;
+$red: #c93030;
+$yellow: #c0d62a;
+$orange: #dd8e31;
+$purple: #806ab8;
+$lavender: #a74c8c;
+$sky: #309ad1;
+$brown: #59532a;
+$teal: #6ab8b4;
+$rust: #c85434;
+$navy: #383a5a;
+
+$bright-orange: #fd7d01;
+$dirt: #5e4d43;
+$mocha: #3b312b;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin theme($color) {
+}
+
+BODY{
+	/*background-color: $dirt;*/
+  background-image: url('../images/bg.png');
+}
+.container{
+  .header{
+    h1{
+      color: $white;
+    }
+    .search{
+      input{
+
+      }
+      button{
+
+      }
+    }
+    .nav{
+
+    }
+  }
+  .content{
+    vertical-align: top;
+    .col{
+      display: inline-block;
+      width: 50%;
+      vertical-align: top;
+    }
+  }
+  .footer{
+
+  }
+}
+.letters{
+  margin: 15px 0;
+  .letter{
+    color: $bright-orange;
+    background-color: $dark;
+    display: inline-block;
+    padding: 10px;
+    margin-right: 1px;
+    text-transform: uppercase;
+    min-width: 33px;
+    text-align: center;
+  }
+  .letter:hover{
+    color: $white;
+    background-color: $bright-orange;
+    text-decoration: none;
+  }
+  .letter-anchor{
+    color: $white;
+    background-color: $bright-orange;
+    text-decoration: none;
+  }
+}
+.total{
+  color: $white;
+}
+.movie{
+  width: 100%;
+  display: block;
+  .poster{
+    display: inline-block;
+    width: 60px;
+    vertical-align: top;
+    img{
+      width: 50px;
+      margin: 7px auto;
+    }
+  }
+  .details{
+    display: inline-block;
+    width: 275px;
+    box-sizing: border-box;
+    padding: 8px;
+    h3{
+      font-size: 15px;
+      margin: 0;
+      padding: 0;
+      a{
+          color: $white;
+      }
+    }
+    .info{
+      .pane{
+        width: 48%;
+        display: inline-block;
+        p{
+            color: $white;
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            color: $bright-orange;
+            font-size: 12px;
+        }
+        a:hover, a:active, a:focus{
+          background-color: $mocha;
+        }
+        span{
+            color: $bright-orange;
+        }
+      }
+      .pane-left{
+          width: 59%;
+      }
+      .pane-right{
+          width: 39%;
+      }
+    }
+  }
+}
+.movie:nth-child(even){
+  background-color: $dark;
+}
+.movie:nth-child(odd){
+  /*background-color: $dirt;*/
+}
+/*Landscape Phones*/
+@media (min-width: 480px){
+}
+/*Tablets*/
+/*Portrait Tablets*/
+@media (min-width: 600px){
+}
+/*Landscape Tablets*/
+@media (min-width: 768px){
+}
+/*Desktops*/
+@media (min-width: 960px){
+}
+/*Large Desktops*/
+@media (min-width: 992px) {
+}
+/*Large Desktops*/
+@media (min-width: 1200px) {
+}
+/*Overrides and Larger Sizes*/
+/*Phones*/
+@media (min-width: 0px) and (max-width: 767px){
+}
+/*Portrait Phones*/
+/*Phone*/
+@media (min-width: 0px) and (max-width: 320px) and (orientation: portrait){
+}
+/*Phablet*/
+@media (min-width: 321px) and (max-width: 767px) and (orientation: portrait){
+}
+/*Landscape Phones*/
+@media (min-width: 321px) and (max-width: 767px) and (orientation: landscape){
+}
+/*Tablets*/
+/*Portrait Tablets*/
+@media (min-width: 600px) and (max-width: 960px){
+}
+/*Landscape Tablets*/
+@media (min-width: 800px) and (max-width: 1280px){
+}
+/*Desktops*/
+@media (min-width: 960px) and (max-width: 1200px){
+}
+.flip-container {
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+}
+.flip-container:hover .back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.flip-container:hover .front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.flipper {
+    -webkit-transition: .6s;
+    -moz-transition: .6s;
+    -ms-transition: .6s;
+    transition: .6s;
+    position: relative;
+}
+.front,.back {
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: .6s;
+    -moz-backface-visibility: hidden;
+    -moz-transition: .6s;
+    -ms-backface-visibility: hidden;
+    -ms-transition: .6s;
+    backface-visibility: hidden;
+    transition: .6s;
+    position: absolute;
+    left: 0;
+}
+.front {
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    opacity: .9;
+}
+
+.back {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+.theme{
+
+}

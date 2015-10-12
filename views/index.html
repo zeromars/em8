@@ -1,0 +1,83 @@
+{{#extend "layout"}}
+
+    {{#content "meta"}}
+    {{/content}}
+
+    {{#content "css"}}
+    {{/content}}
+
+    {{#content "js"}}
+    {{/content}}
+
+    {{#content "pre"}}
+    {{/content}}
+
+    {{#content "theme"}}{{/content}}
+    {{#content "body"}}
+        <div class="letters">
+          <a href="/letter/a" class="letter letter-anchor">a</a>
+          <a href="/letter/b" class="letter">b</a>
+          <a href="/letter/c" class="letter">c</a>
+          <a href="/letter/d" class="letter">d</a>
+          <a href="/letter/e" class="letter">e</a>
+          <a href="/letter/f" class="letter">f</a>
+          <a href="/letter/g" class="letter">g</a>
+          <a href="/letter/h" class="letter">h</a>
+          <a href="/letter/i" class="letter">i</a>
+          <a href="/letter/j" class="letter">j</a>
+          <a href="/letter/k" class="letter">k</a>
+          <a href="/letter/l" class="letter">l</a>
+          <a href="/letter/m" class="letter">m</a>
+          <a href="/letter/n" class="letter">n</a>
+          <a href="/letter/o" class="letter">o</a>
+          <a href="/letter/p" class="letter">p</a>
+          <a href="/letter/q" class="letter">q</a>
+          <a href="/letter/r" class="letter">r</a>
+          <a href="/letter/s" class="letter">s</a>
+          <a href="/letter/t" class="letter">t</a>
+          <a href="/letter/u" class="letter">u</a>
+          <a href="/letter/v" class="letter">v</a>
+          <a href="/letter/w" class="letter">w</a>
+          <a href="/letter/x" class="letter">x</a>
+          <a href="/letter/y" class="letter">y</a>
+          <a href="/letter/z" class="letter">z</a>
+        </div>
+        <p class="total">Total: {{total}}</p>
+        <div class="movies">
+          <div class="col">
+            {{#each movies}}
+            <div class="movie">
+                <div class="poster">
+                    <p><img src="{{'Front Cover'}}" alt="" width="50"></p>
+                </div>
+                <div class="details">
+                    <h3><a href="/detail/{{Barcode}}">{{Title}}</a></h3>
+                    <div class="info">
+                        <div class="pane pane-left">
+                            <p>Director: <a href="/director/{{Director}}">{{Director}}</a></p>
+                            <p>Released: <a href="/year/{{'Movie Release Year'}}">{{'Movie Release Year'}}</a></p>
+                            <p>Running Time: <span>{{'Running Time'}}</span></p>
+                        </div>
+                        <div class="pane pane-right">
+                            <p>Format: <a href="/format/{{Format}}">{{Format}}</a></p>
+                            <p>IMDB: <span>{{'IMDb Rating'}}</span></p>
+                            <p>Country: <span>{{Country}}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{#ifCond @index '==' ../half}}
+              </div><div class="col">
+            {{/ifCond}}
+            {{/each}}
+          </div>
+        </div>
+    {{/content}}
+
+    {{#content "foot" mode="prepend"}}
+    {{/content}}
+
+    {{#content "scripts"}}
+    {{/content}}
+
+{{/extend}}
